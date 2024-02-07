@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth" // import this metod then beow it is exported and
               //and called withnapp as parameter
 
+import {getFirestore} from "firebase/firestore"
 
 
 const firebaseConfig = {
@@ -22,3 +23,4 @@ const app = initializeApp(firebaseConfig);
 export const auth =getAuth(app) // remember to export and add app as parameter
 
 export const googleProvider = new GoogleAuthProvider()
+export const db = getFirestore(app)
